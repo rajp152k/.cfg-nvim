@@ -17,10 +17,10 @@ filetype plugin indent on
 nnoremap <leader>d :Ex<CR>
 nnoremap <leader>h :h<Space>
 "{{{ init.vim
-nnoremap <silent> <Leader>ev :edit /root/.config/nvim/init.vim<CR>
-nnoremap <silent> <Leader>el :edit /root/.config/nvim/lua/init.lua<CR>
-nnoremap <silent> <Leader>esv :source /root/.config/nvim/init.vim<CR>
-nnoremap <silent> <Leader>esl :source /root/.config/nvim/lua/init.lua<CR>
+nnoremap <silent> <Leader>ev :edit /home/rp152k/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>el :edit /home/rp152k/.config/nvim/lua/init.lua<CR>
+nnoremap <silent> <Leader>esv :source /home/rp152k/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>esl :source /home/rp152k/.config/nvim/lua/init.lua<CR>
 vnoremap <silent> <Leader>es :'<,'>source<CR>
 "}}}
 "{{{ Tabs
@@ -84,8 +84,6 @@ nnoremap <leader>l1 :LspStart<CR>
 nnoremap <leader>l0 :LspStop<CR>
 "}}}
 "{{{ codeium
-nnoremap <leader>cd :CodeiumDisable<CR>
-nnoremap <leader>ce :CodeiumEnable<CR>
 imap <script><silent><nowait><expr> <C-g> codeium#Accept()
 "}}}
 "{{{ Mason
@@ -105,7 +103,10 @@ let g:lightline = {
             \ }
 "}}}
 "{{{ colorscheme
-colorscheme carbonfox
+colorscheme duskfox
+nnoremap <leader>c0 :colorscheme duskfox<CR>
+nnoremap <leader>c1 :colorscheme dawnfox<CR>
+nnoremap <leader>cs :colorscheme 
 "}}}
 "}}}
 "{{{ Au Bufs

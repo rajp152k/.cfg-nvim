@@ -68,9 +68,10 @@ end)
 --     timeout_ms = 10000,
 --   },
 --   servers = {
---     ['pylsp'] = { 'python' },
+--     ['pyright'] = { 'python' },
 --     ['vimls'] = { 'vimscript' },
 --     ['lua_ls'] = { 'lua' },
+--     ['marksman'] = { 'markdown' },
 --   }
 -- })
 lsp_zero.set_sign_icons({
@@ -83,7 +84,7 @@ lsp_zero.set_sign_icons({
 -- {{{ Mason
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { "pylsp", "vimls", "lua_ls" },
+	ensure_installed = { "pyright", "vimls", "lua_ls" , "marksman"},
 	handlers = {
 		lsp_zero.default_setup,
 	},
