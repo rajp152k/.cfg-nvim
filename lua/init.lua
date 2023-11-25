@@ -103,7 +103,8 @@ iron.setup {
 		repl_definition = {
 			sh = { command = { "bash" } },
 			python = require("iron.fts.python").ipython,
-			lua = { command = { "lua" } }
+			lua = { command = { "lua" } },
+			hy = { command = { "hy" } }
 		},
 		repl_open_cmd = require('iron.view').right(60),
 	},

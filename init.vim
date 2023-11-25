@@ -117,7 +117,7 @@ nnoremap <leader>cs :colorscheme
 "{{{ Python
 augroup PythonFolding
     autocmd!
-    autocmd FileType python setlocal foldmethod=indent foldlevel=1
+    autocmd FileType python,hy setlocal foldmethod=indent foldlevel=1
 augroup END
 "}}}
 "}}}
