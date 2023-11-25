@@ -14,8 +14,7 @@ let mapleader="\<Space>"
 let g:netrw_keepdir = 0
 set splitbelow
 filetype plugin indent on
-nnoremap <leader>d :Rexplore<CR>
-nnoremap <leader>h :h<Space>
+nnoremap <leader>d :Vexplore<CR>
 set hlsearch
 nnoremap <esc><esc> :nohlsearch<CR><esc>
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
@@ -38,8 +37,6 @@ nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
-Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'frazrepo/vim-rainbow'
 Plug 'junegunn/vim-peekaboo'
@@ -61,9 +58,13 @@ Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'tpope/vim-eunuch'
 Plug 'Vigemus/iron.nvim'
 Plug 'NeogitOrg/neogit'
+Plug 'hylang/vim-hy'
 call plug#end()
 "}}}
 "{{{ Plug-Config
+"{{{ vim-hy
+let g:hy_enable_conceal = 1
+"}}}
 "{{{ Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
@@ -106,9 +107,9 @@ let g:lightline = {
             \ }
 "}}}
 "{{{ colorscheme
-colorscheme duskfox
-nnoremap <leader>c0 :colorscheme duskfox<CR>
-nnoremap <leader>c1 :colorscheme dawnfox<CR>
+colorscheme carbonfox
+nnoremap <leader>c0 :colorscheme carbonfox<CR>
+nnoremap <leader>c1 :colorscheme zellner<CR>
 nnoremap <leader>cs :colorscheme 
 "}}}
 "}}}
