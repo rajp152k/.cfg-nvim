@@ -14,8 +14,11 @@ let mapleader="\<Space>"
 let g:netrw_keepdir = 0
 set splitbelow
 filetype plugin indent on
-nnoremap <leader>d :Ex<CR>
+nnoremap <leader>d :Rexplore<CR>
 nnoremap <leader>h :h<Space>
+set hlsearch
+nnoremap <esc><esc> :nohlsearch<CR><esc>
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 "{{{ init.vim
 nnoremap <silent> <Leader>ev :edit /home/rp152k/.config/nvim/init.vim<CR>
 nnoremap <silent> <Leader>el :edit /home/rp152k/.config/nvim/lua/init.lua<CR>
@@ -30,20 +33,14 @@ nnoremap <leader>tn :tabn<CR>
 nnoremap <leader>tp :tabp<CR>
 nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 "}}}
-"Searching {{{ 
-set hlsearch
-nnoremap <esc><esc> :nohlsearch<CR><esc>
-nnoremap <silent> <leader>ff :FZF<CR>
-nnoremap <silent> <leader>fh :FZF~<CR>
-nnoremap <silent> <leader>fa :Rg<CR>
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-" }}}
 "}}}
 "{{{ Plugs
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', {'do': { -> fzf#install()}}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'frazrepo/vim-rainbow'
 Plug 'junegunn/vim-peekaboo'
 Plug 'simnalamburt/vim-mundo'
@@ -67,6 +64,12 @@ Plug 'NeogitOrg/neogit'
 call plug#end()
 "}}}
 "{{{ Plug-Config
+"{{{ Telescope
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
+"}}}
 "{{{ Neogit
 nnoremap <leader>gg :Neogit<CR>
 "}}}
