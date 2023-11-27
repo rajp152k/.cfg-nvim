@@ -19,10 +19,10 @@ set hlsearch
 nnoremap <esc><esc> :nohlsearch<CR><esc>
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 "{{{ init.vim
-nnoremap <silent> <Leader>ev :edit /home/rp152k/.config/nvim/init.vim<CR>
-nnoremap <silent> <Leader>el :edit /home/rp152k/.config/nvim/lua/init.lua<CR>
-nnoremap <silent> <Leader>esv :source /home/rp152k/.config/nvim/init.vim<CR>
-nnoremap <silent> <Leader>esl :source /home/rp152k/.config/nvim/lua/init.lua<CR>
+nnoremap <silent> <Leader>ev :edit /root/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>el :edit /root/.config/nvim/lua/init.lua<CR>
+nnoremap <silent> <Leader>esv :source /root/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>esl :source /root/.config/nvim/lua/init.lua<CR>
 vnoremap <silent> <Leader>es :'<,'>source<CR>
 "}}}
 "{{{ Tabs
