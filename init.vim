@@ -110,9 +110,15 @@ colorscheme carbonfox
 "}}}
 "{{{ Au Bufs
 "{{{ Python
-augroup PythonFolding
+augroup PythonBufs
     autocmd!
     autocmd FileType python setlocal foldmethod=indent foldlevel=1
+augroup END
+"}}}
+"{{{ Markdown
+augroup MarkdownBufs
+    autocmd!
+    autocmd FileType markdown setlocal spell wrap foldmethod=indent
 augroup END
 "}}}
 "}}}
