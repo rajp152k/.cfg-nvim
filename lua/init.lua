@@ -101,10 +101,11 @@ iron.setup {
 		close_window_on_exit = true,
 		repl_definition = {
 			sh = { command = { "bash" } },
-			python = require("iron.fts.python").ipython,
+			markdown = { command = { "bash" } },
+			python = { command = { "ipython" } },
 			lua = { command = { "lua" } }
 		},
-		repl_open_cmd = require('iron.view').right(60),
+		repl_open_cmd = require('iron.view').right(80),
 	},
 	keymaps = {
 		send_motion = "<leader>sm",
