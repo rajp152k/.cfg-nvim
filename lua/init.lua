@@ -92,13 +92,12 @@ require('mason-lspconfig').setup({
 -- }}}
 -- {{{ IRON.NVIM
 local iron = require("iron.core")
+local view = require("iron.view")
 
 iron.setup {
 	config = {
-
-		highlight_last = "IronLastSent",
+highlight_last = "IronLastSent",
 		scratch_repl = false,
-		visibility = require("iron.visibility").single,
 		close_window_on_exit = true,
 		repl_definition = {
 			sh = { command = { "bash" } },
@@ -107,7 +106,7 @@ iron.setup {
 			python = { command = { "ipython" } },
 			lua = { command = { "lua" } }
 		},
-		repl_open_cmd = require('iron.view').right(80),
+		repl_open_cmd = view.split.vertical.botright(1 - 0.61903398875)
 	},
 	keymaps = {
 		send_motion = "<leader>sm",
