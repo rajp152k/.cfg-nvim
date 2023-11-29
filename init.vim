@@ -1,5 +1,4 @@
 " INIT.VIM
-
 "{{{ Base
 set relativenumber number
 set hidden
@@ -36,7 +35,8 @@ nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 "{{{ Plugs
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'nvim-lua/plenary.nvim'
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf.vim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'frazrepo/vim-rainbow'
 Plug 'junegunn/vim-peekaboo'
