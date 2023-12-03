@@ -1,4 +1,5 @@
 " INIT.VIM
+
 "{{{ Base
 set relativenumber number
 set hidden
