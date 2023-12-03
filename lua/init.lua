@@ -89,7 +89,7 @@ highlight_last = "IronLastSent",
 			markdown = { command = { "bash" } },
 			python = { command = { "ipython" } },
 			lua = { command = { "lua" } },
-			hy = { command = { "hy" } }
+			hy = { command = { "/home/rp152k/micromamba/envs/hy/bin/hy" } }
 		},
 		repl_open_cmd = view.split.vertical.botright(1 - 0.61903398875)
 	},
