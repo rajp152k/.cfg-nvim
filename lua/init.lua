@@ -86,10 +86,10 @@ highlight_last = "IronLastSent",
 		close_window_on_exit = true,
 		repl_definition = {
 			sh = { command = { "bash" } },
-
 			markdown = { command = { "bash" } },
 			python = { command = { "ipython" } },
-			lua = { command = { "lua" } }
+			lua = { command = { "lua" } },
+			hy = { command = { "hy" } }
 		},
 		repl_open_cmd = view.split.vertical.botright(1 - 0.61903398875)
 	},
