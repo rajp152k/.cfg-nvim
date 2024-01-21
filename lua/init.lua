@@ -75,45 +75,6 @@ require('mason-lspconfig').setup({
 	},
 })
 -- }}}
--- {{{ IRON.NVIM
-local iron = require("iron.core")
-local view = require("iron.view")
-
-iron.setup {
-	config = {
-highlight_last = "IronLastSent",
-		scratch_repl = true,
-		close_window_on_exit = true,
-		repl_definition = {
-			sh = { command = { "bash" } },
-			markdown = { command = { "bash" } },
-			python = { command = { "ipython" } },
-			lua = { command = { "lua" } },
-			hy = { command = { "/home/rp152k/micromamba/envs/hy/bin/hy" } }
-		},
-		repl_open_cmd = view.split.vertical.botright(1 - 0.61903398875)
-	},
-	keymaps = {
-		send_motion = "<leader>sm",
-		visual_send = "<leader>sv",
-		send_file = "<leader>sf",
-		send_line = "<leader>sl",
-		send_until_cursor = "<leader>su",
-		send_mark = "<leader>sm",
-		mark_motion = "<leader>mc",
-		mark_visual = "<leader>mc",
-		remove_mark = "<leader>md",
-		cr = "<leader>s<cr>",
-		interrupt = "<leader>s<leader>",
-		exit = "<leader>sq",
-		clear = "<leader>cl",
-	},
-	highlight = {
-		italic = true
-	},
-	ignore_blank_lines = false
-}
--- }}}
 -- {{{ Neogit
 local neogit = require("neogit")
 

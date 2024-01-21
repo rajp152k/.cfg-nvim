@@ -61,6 +61,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'Vigemus/iron.nvim'
 Plug 'NeogitOrg/neogit'
 Plug 'hylang/vim-hy'
+Plug 'jpalardy/vim-slime'
 call plug#end()
 "}}}
 "{{{ Plug-Config
@@ -78,11 +79,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<CR>
 "{{{ Neogit
 nnoremap <leader>gg :Neogit<CR>
 "}}}
-"{{{ Iron
-nnoremap <leader>rs :IronRepl<CR>
-nnoremap <leader>rr :IronRestart<CR>
-nnoremap <leader>rf :IronFocus<CR>
-nnoremap <leader>rh :IronHide<CR>
+"{{{ Vim-Slime
+let g:slime_target="neovim"
 "}}}
 "{{{ LSP-zero
 nnoremap <leader>lf :LspZeroFormat<CR>
