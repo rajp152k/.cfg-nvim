@@ -34,6 +34,9 @@ nnoremap <leader>tn :tabn<CR>
 nnoremap <leader>tp :tabp<CR>
 nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 "}}}
+"{{{ Terminal 
+tnoremap <C-W> <C-\><C-n><C-W>
+"}}}
 "}}}
 "{{{ Plugs
 call plug#begin('~/.local/share/nvim/plugged')
