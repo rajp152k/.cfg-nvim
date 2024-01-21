@@ -14,8 +14,8 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<C-p>'] = cmp.mapping.scroll_docs(-4),
-		['<C-n>'] = cmp.mapping.scroll_docs(4),
+		['<C-b>'] = cmp.mapping.scroll_docs(-4),
+		['<C-f>'] = cmp.mapping.scroll_docs(4),
 		['<C-Space>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
 		['<CR>'] = cmp.mapping.confirm({ select = true }),
@@ -69,7 +69,7 @@ lsp_zero.set_sign_icons({
 -- {{{ Mason
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { "pylsp", "vimls", "lua_ls" , "marksman"},
+	ensure_installed = { "tsserver","pylsp", "vimls", "lua_ls" , "marksman","bashls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
@@ -82,7 +82,7 @@ local view = require("iron.view")
 iron.setup {
 	config = {
 highlight_last = "IronLastSent",
-		scratch_repl = false,
+		scratch_repl = true,
 		close_window_on_exit = true,
 		repl_definition = {
 			sh = { command = { "bash" } },
@@ -111,7 +111,7 @@ highlight_last = "IronLastSent",
 	highlight = {
 		italic = true
 	},
-	ignore_blank_lines = true
+	ignore_blank_lines = false
 }
 -- }}}
 -- {{{ Neogit
@@ -285,7 +285,6 @@ neogit.setup {
       ["<c-s>"] = "StageAll",
       ["u"] = "Unstage",
       ["U"] = "UnstageStaged",
-      ["d"] = "DiffAtFile",
       ["$"] = "CommandHistory",
       ["#"] = "Console",
       ["<c-r>"] = "RefreshBuffer",

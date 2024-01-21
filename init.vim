@@ -1,5 +1,4 @@
 " INIT.VIM
-
 "{{{ Base
 set relativenumber number
 set hidden
@@ -10,14 +9,17 @@ set foldlevel=100
 set nrformats+=alpha
 set ignorecase smartcase
 set wrapscan
+set noexpandtab
 let mapleader="\<Space>"
 let g:netrw_keepdir = 0
 set splitbelow
 filetype plugin indent on
-nnoremap <leader>d :Vexplore<CR>
+nnoremap <leader>d :Explore<CR>
 set hlsearch
 nnoremap <esc><esc> :nohlsearch<CR><esc>
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+cnoreabbrev clip !xclip -selection clipboard
+nnoremap <Leader>gt :read ~/source/creds/gitTok.catable<CR>
 "{{{ init.vim
 nnoremap <silent> <Leader>ev :edit /home/rp152k/.config/nvim/init.vim<CR>
 nnoremap <silent> <Leader>el :edit /home/rp152k/.config/nvim/lua/init.lua<CR>
@@ -36,7 +38,6 @@ nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 "{{{ Plugs
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'nvim-lua/plenary.nvim'
-"Plug 'junegunn/fzf.vim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 Plug 'frazrepo/vim-rainbow'
@@ -67,7 +68,9 @@ call plug#end()
 let g:hy_enable_conceal = 1
 "}}}
 "{{{ Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>ffc <cmd>Telescope find_files<CR>
+nnoremap <leader>ffs <cmd>Telescope find_files cwd=~/source/<CR>
+nnoremap <leader>fp <cmd>Telescope file
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>fh <cmd>Telescope help_tags<CR>
