@@ -58,7 +58,6 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 Plug 'EdenEast/nightfox.nvim'
 Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 Plug 'tpope/vim-eunuch'
-Plug 'Vigemus/iron.nvim'
 Plug 'NeogitOrg/neogit'
 Plug 'hylang/vim-hy'
 Plug 'jpalardy/vim-slime'
