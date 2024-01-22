@@ -64,6 +64,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'NeogitOrg/neogit'
 Plug 'hylang/vim-hy'
 Plug 'jpalardy/vim-slime'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 "}}}
 "{{{ Plug-Config
@@ -83,6 +84,7 @@ nnoremap <leader>gg :Neogit<CR>
 "}}}
 "{{{ Vim-Slime
 let g:slime_target="neovim"
+let g:slime_bracketed_paste = 1
 "}}}
 "{{{ LSP-zero
 nnoremap <leader>lf :LspZeroFormat<CR>
