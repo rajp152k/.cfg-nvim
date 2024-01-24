@@ -68,8 +68,8 @@ call plug#end()
 let g:hy_enable_conceal = 1
 "}}}
 "{{{ Telescope
--nnoremap <leader>ffc <cmd>Telescope find_files<CR>
--nnoremap <leader>ffw <cmd>Telescope find_files cwd=~/work/ hidden=True<CR>
+nnoremap <leader>ffc <cmd>Telescope find_files<CR>
+nnoremap <leader>ffw <cmd>Telescope find_files cwd=~/work/ hidden=True<CR>
 nnoremap <leader>fp <cmd>Telescope file
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
