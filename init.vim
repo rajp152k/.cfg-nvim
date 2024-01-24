@@ -72,8 +72,9 @@ call plug#end()
 let g:hy_enable_conceal = 1
 "}}}
 "{{{ Telescope
-nnoremap <leader>ffc <cmd>Telescope find_files<CR>
-nnoremap <leader>ffs <cmd>Telescope find_files cwd=~/source/<CR>
+nnoremap <leader>ffc <cmd>Telescope find_files hidden=True<CR>
+nnoremap <leader>ffs <cmd>Telescope find_files cwd=~/source/ hidden=True<CR>
+nnoremap <leader>ffh <cmd>Telescope find_files cwd=/home/rp152k hidden=True<CR>
 nnoremap <leader>fp <cmd>Telescope file
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
@@ -120,6 +121,10 @@ nnoremap <leader>cs :colorscheme
 "}}}
 "}}}
 "{{{ Au Bufs
+"{{{Terminal
+tnoremap <C-Space>mp<CR> <C-c>mamba activate pytorch<CR>
+tnoremap <C-Space>md<CR> <C-c>mamba deactivate<CR>
+"}}}
 "{{{ Python
 augroup PythonBufs
     autocmd!
