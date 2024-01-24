@@ -64,7 +64,6 @@ Plug 'tpope/vim-eunuch'
 Plug 'NeogitOrg/neogit'
 Plug 'hylang/vim-hy'
 Plug 'jpalardy/vim-slime'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 "}}}
 "{{{ Plug-Config
