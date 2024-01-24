@@ -125,9 +125,6 @@ tmap <C-space>c <C-\><C-n>:q<CR>
 
 tnoremap <C-W> <C-\><C-n><C-W>
 
-tnoremap <C-Space>mp<CR> mamba activate pytorch<CR>
-tnoremap <C-Space>md<CR> mamba deactivate<CR>
-
 tnoremap <C-Space>si<CR> ipython<CR>
 "}}}
 "{{{ Python
