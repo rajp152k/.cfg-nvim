@@ -34,9 +34,6 @@ nnoremap <leader>tn :tabn<CR>
 nnoremap <leader>tp :tabp<CR>
 nnoremap <leader>t :<C-U>tabnext <C-R>=input("Enter tab number: ")<CR><CR>
 "}}}
-"{{{ Terminal 
-tnoremap <C-W> <C-\><C-n><C-W>
-"}}}
 "}}}
 "{{{ Plugs
 call plug#begin('~/.local/share/nvim/plugged')
@@ -71,8 +68,9 @@ call plug#end()
 let g:hy_enable_conceal = 1
 "}}}
 "{{{ Telescope
-nnoremap <leader>ffc <cmd>Telescope find_files<CR>
-nnoremap <leader>ffs <cmd>Telescope find_files cwd=~/source/<CR>
+nnoremap <leader>ffc <cmd>Telescope find_files hidden=True<CR>
+nnoremap <leader>ffs <cmd>Telescope find_files cwd=~/source/ hidden=True<CR>
+nnoremap <leader>ffh <cmd>Telescope find_files cwd=/home/rp152k hidden=True<CR>
 nnoremap <leader>fp <cmd>Telescope file
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
@@ -119,6 +117,20 @@ nnoremap <leader>cs :colorscheme
 "}}}
 "}}}
 "{{{ Au Bufs
+"{{{Terminal
+nnoremap <Leader>sta :ter<CR>i
+nnoremap <Leader>stv :vs<bar>ter<CR>i
+nnoremap <Leader>sth :sp<bar>ter<CR>i
+
+tmap <C-space>c <C-\><C-n>:q<CR>
+
+tnoremap <C-W> <C-\><C-n><C-W>
+
+tnoremap <C-Space>mp<CR> mamba activate pytorch<CR>
+tnoremap <C-Space>md<CR> mamba deactivate<CR>
+
+tnoremap <C-Space>si<CR> ipython<CR>
+"}}}
 "{{{ Python
 augroup PythonBufs
     autocmd!
