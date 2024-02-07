@@ -14,7 +14,9 @@ let mapleader="\<Space>"
 let g:netrw_keepdir = 0
 set splitbelow
 filetype plugin indent on
-nnoremap <leader>d :Explore<CR>
+nnoremap <leader>dd :Explore<CR>
+nnoremap <leader>dv :Vexplore<CR>
+nnoremap <leader>dh :Hexplore<CR>
 set hlsearch
 nnoremap <esc><esc> :nohlsearch<CR><esc>
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
@@ -70,6 +72,7 @@ let g:hy_enable_conceal = 1
 "{{{ Telescope
 nnoremap <leader>ffc <cmd>Telescope find_files<CR>
 nnoremap <leader>ffw <cmd>Telescope find_files cwd=~/work/ hidden=True<CR>
+nnoremap <leader>ffg <cmd>Telescope git_files<CR>
 nnoremap <leader>fp <cmd>Telescope file
 nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
