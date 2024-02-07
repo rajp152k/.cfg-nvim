@@ -66,10 +66,25 @@ lsp_zero.set_sign_icons({
 	info = '»'
 })
 -- }}}
+-- {{{ Custom LSP Servers
+local lspconfig = require 'lspconfig'
+local configs = require 'lspconfig.configs'
+
+if not configs.hyuga then
+  configs.hyuga = {
+    default_config = {
+      cmd = { 'hyuga' },
+      root_dir = lspconfig.util.root_pattern('.git'),
+      filetypes = { 'hy' },
+    },
+  }
+end
+lspconfig.hyuga.setup {}
+-- }}}
 -- {{{ Mason
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { "tsserver","pylsp", "vimls", "lua_ls" , "marksman","bashls" },
+	ensure_installed = {"gopls","tsserver","pylsp", "vimls", "lua_ls" , "marksman","bashls" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
